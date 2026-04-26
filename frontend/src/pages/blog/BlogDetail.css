@@ -1,0 +1,74 @@
+.blog-detail {}
+.back-link {
+  display: inline-block; margin-bottom: 36px;
+  font-size: 0.88rem; color: var(--muted);
+  transition: var(--transition);
+}
+.back-link:hover { color: var(--gold); }
+
+.detail-article {
+  max-width: 740px; margin: 0 auto;
+  opacity: 0; animation-fill-mode: forwards;
+}
+.detail-meta {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 20px; flex-wrap: wrap;
+}
+.detail-category {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gold);
+  border: 1px solid rgba(201,147,58,0.3); padding: 3px 12px; border-radius: 20px;
+}
+.detail-date, .detail-read { font-size: 0.85rem; color: var(--muted); }
+
+.detail-title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900; line-height: 1.15; margin-bottom: 20px;
+}
+.detail-excerpt {
+  font-size: 1.15rem; color: var(--muted); line-height: 1.7;
+  margin-bottom: 28px; font-style: italic;
+  border-left: 3px solid var(--gold); padding-left: 20px;
+}
+
+.detail-author { display: flex; align-items: center; gap: 14px; margin-bottom: 32px; }
+.detail-avatar {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--ink); color: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; font-weight: 700;
+}
+.detail-author-name { font-weight: 600; }
+.detail-author-role { font-size: 0.8rem; color: var(--muted); }
+
+.detail-divider {
+  height: 1px; background: var(--border); margin-bottom: 40px;
+  position: relative;
+}
+.detail-divider::after {
+  content: '✦'; position: absolute; left: 50%; top: -10px;
+  transform: translateX(-50%); background: var(--paper);
+  color: var(--gold); padding: 0 12px; font-size: 0.9rem;
+}
+
+.detail-body { font-size: 1.05rem; line-height: 1.85; color: #2a2820; }
+.detail-body p { margin-bottom: 24px; }
+
+.detail-tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 32px 0 24px; }
+
+.detail-actions { display: flex; align-items: center; gap: 12px; margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border); }
+.like-btn {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 24px; background: var(--ink); color: var(--paper);
+  border-radius: var(--radius); font-size: 0.9rem; font-weight: 600;
+  transition: var(--transition);
+}
+.like-btn:hover { background: var(--gold); color: var(--ink); }
+.like-btn span { background: rgba(255,255,255,0.15); padding: 2px 8px; border-radius: 10px; font-size: 0.8rem; }
+
+.delete-btn {
+  padding: 10px 20px; background: transparent;
+  border: 1px solid rgba(181,69,27,0.3); color: var(--rust);
+  font-size: 0.88rem; border-radius: var(--radius); transition: var(--transition);
+}
+.delete-btn:hover { background: var(--rust); color: white; border-color: var(--rust); }
